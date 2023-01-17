@@ -1,0 +1,15 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.App{
+    height: 100vh;
+    width: 100vw;
+    background-image: url("https://images.unsplash.com/photo-1579003593419-98f949b9398f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=873&q=80");
+    background-repeat: no-repeat fixed;
+    background-size: 100vw 100vh;
+    /* object-fit:fill; */
+}
+.App img::-webkit-scrollbar {
+    display: none;
+  }

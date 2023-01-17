@@ -1,0 +1,39 @@
+.Home{
+    color: white;
+    display: block;
+    margin: 50px;
+}
+.home{
+    background-color: rgba(0, 0, 0, 0.493);
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    border-radius: 10px;
+}
+.place{
+    font-size: 25px;
+    display: flex;
+    text-align: center;
+}
+.place button{
+    background-color: transparent;
+    border: none;
+}
+.place_icon{
+    font-size: 35px !important;
+    margin: 0px 10px;
+    color: rgb(255,222,54);
+}
+.temp{
+    font-size: 20px;
+}
+.others{
+    width: 75%;
+    /* border: 2px solid red; */
+}
+.others hr{
+    width: 85%;
+}
+.others div{
+    margin: 10px 0px 
+}

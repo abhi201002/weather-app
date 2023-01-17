@@ -1,0 +1,27 @@
+.Favorite{
+    display: block;
+    color: white;
+    margin: 50px;
+}
+.favorite{
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.493);
+    width: 75%;
+    font-size: 25px;
+    padding: 15px;
+}
+.weather{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.weather_link{
+    text-decoration: none;
+    color: white;
+}
+.remove{
+    background-color: red;
+    border: 1.5px solid black;
+    height: 30px;
+    /* font-size: 15px; */
+}
