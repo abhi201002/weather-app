@@ -4,7 +4,7 @@ import StarIcon from '@mui/icons-material/Star';
 import './home.css'
 
 function Home({data}) {
-  const [{m},dispatch] = useDataValue();
+  const [state,dispatch] = useDataValue();
   var date = new Date(data?.dt * 1000);
   var hours = date.getHours();
   var minutes = "0" + date.getMinutes();
@@ -14,24 +14,23 @@ function Home({data}) {
     dispatch({
       type: "SET_CITY",
       city: {name: data?.name,id: data?.id},
-      m : [data?.name,1]
     })
   }
   const remove = () =>{
-    console.log("yes")
+    // console.log("yes")
     document.querySelector(".place_icon").style.color = "black"
-    // dispatch({
-    //   type: "SET_CITY",
-    //   city: {name: data?.name,id: data?.id},
-    //   m : [data?.name,1]
-    // })
+    dispatch({
+      type: "REMOVE_CITY",
+      city: {name: data?.name,id: data?.id},
+    })
+    state?.m.delete(data?.name);
   }
   return (
     <div className="Home">
       <div className="home">
         <div className="place">
           <h2>{data?.name} · {data?.sys.country}</h2>
-          <button  onClick= {add}><StarIcon className='place_icon'/></button>
+          <button  onClick={state?.m?.has(data?.name) ? () => {remove()} :() =>{add()}}><StarIcon className='place_icon'/></button>
         </div>
         <div className="temp">
           <strong>{data?.main.temp}</strong>°C as of {hours}:{minutes.substr(-2)}:{seconds.substr(-2)} UTC

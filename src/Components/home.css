@@ -22,7 +22,8 @@
 .place_icon{
     font-size: 35px !important;
     margin: 0px 10px;
-    color: rgb(255,222,54);
+    /* color: rgb(255,222,54); */
+    color: black
 }
 .temp{
     font-size: 20px;
